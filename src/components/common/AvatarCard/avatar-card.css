@@ -1,0 +1,32 @@
+:host {
+  display: grid;
+  width: 100%;
+}
+
+img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}
+h1 {
+  margin: var(--m-0);
+  color: var(--heading);
+  font-size: var(--fs-6);
+}
+p {
+  margin: var(--m-2) var(--m-0) var(--m-0);
+  color: var(--paragraph);
+}
+.links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--m-2);
+}
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}

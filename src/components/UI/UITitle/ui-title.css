@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+  font-size: var(--_font-size, var(--fs-2));
+  font-weight: var(--_font-weight, normal);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  margin: 0;
+}

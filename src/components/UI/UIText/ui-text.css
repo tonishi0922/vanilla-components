@@ -1,0 +1,6 @@
+.ui-text {
+  font-size: var(--_font-size);
+  font-weight: var(--_font-weight);
+  color: var(--text);
+  margin: var(--m-0);
+}

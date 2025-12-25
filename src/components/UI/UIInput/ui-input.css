@@ -1,0 +1,34 @@
+:host {
+  display: block;
+}
+
+.ui-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: var(--m-4);
+}
+
+.ui-input-label {
+  color: var(--text);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-bold);
+  margin: 0 0 var(--m-4) 0;
+}
+.ui-input-label > .required {
+  color: var(--text);
+  background-color: var(--label_required);
+  padding: var(--p-1) var(--p-2);
+  margin-left: var(--m-2);
+}
+
+input[type="text"] {
+  height: 36px;
+  font-size: var(--fs-3);
+  box-sizing: border-box;
+  padding: var(--p-6) var(--p-4);
+}
+textarea {
+  height: 144px;
+  font-size: var(--fs-3);
+  padding: var(--p-4) var(--p-4);
+}

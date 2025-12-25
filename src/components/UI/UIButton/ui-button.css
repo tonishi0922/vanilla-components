@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.ui-button {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-bold);
+  color: var(--text);
+  background-color: var(--btn_primary);
+  border: 0.5px solid var(--border);
+  padding: var(--p-2) var(--p-4);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+}
+
+.ui-button-danger {
+  background-color: var(--btn_danger);
+}
+.ui-button-secondary {
+  background-color: var(--btn_secondary);
+}
+
+.ui-button-large {
+  font-size: var(--fs-6);
+  padding: var(--p-4) var(--p-6);
+}
+.ui-button-small {
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-3);
+  padding: var(--p-2) var(--p-4);
+}
+
+.ui-button-wrapper {
+  display: flex;
+}
+
+.ui-button-wrapper.justify-start {
+  justify-content: flex-start;
+}
+.ui-button-wrapper.justify-center {
+  justify-content: center;
+}
+.ui-button-wrapper.justify-end {
+  justify-content: flex-end;
+}
+.ui-button-wrapper.justify-between {
+  justify-content: space-between;
+}
+.ui-button-wrapper.justify-around {
+  justify-content: space-around;
+}
+.ui-button-wrapper.justify-evenly {
+  justify-content: space-evenly;
+}

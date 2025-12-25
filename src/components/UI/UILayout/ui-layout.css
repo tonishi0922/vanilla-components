@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.ui-layout {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin-inline: auto;
+
+  padding-inline: var(--space-4);
+  padding-block: var(--space-6);
+}

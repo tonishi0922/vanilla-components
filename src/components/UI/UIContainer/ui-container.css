@@ -1,0 +1,28 @@
+:host {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ui-container {
+  gap: var(--_gap);
+  max-width: 100%;
+  width: min(100%, 980px);
+  background: var(--bg-sub);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+  box-sizing: border-box;
+}
+
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.ui-figure {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ui-figure.ui-background-img {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.ui-img {
+  width: 100%;
+  height: auto;
+}
+
+.ui-caption {
+  color: var(--text);
+  font-size: var(--fs-2);
+}
