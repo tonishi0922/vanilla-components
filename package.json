@@ -25,9 +25,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "dependencies": {
-    "@tonishi0922/util": "^1.0.4"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
