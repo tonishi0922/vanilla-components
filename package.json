@@ -1,6 +1,6 @@
 {
   "name": "@tonishi0922/vanilla-components",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.js",
   "module": "./dist/index.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "preview": "vite preview",
     "generate:tokens": "node ./src/app/generate-tokens.ts",
     "cem": "cem analyze --config ./cem.config.mjs --outdir ./.vscode "
@@ -21,7 +21,10 @@
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
   },
-   "publishConfig": {
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@tonishi0922/util": "^1.0.4"
   }
 }
