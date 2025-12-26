@@ -14,6 +14,7 @@ export * from "./components/UI/UIText";
 
 // form
 export * from "./components/UI/UIInput";
+export * from "./components/UI/UIButton";
 
 // core
 export * from "./components/UI/UIImage";

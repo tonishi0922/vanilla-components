@@ -1,16 +1,17 @@
 {
   "name": "@tonishi0922/vanilla-components",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "type": "module",
   "main": "dist/index.js",
-  "module": "./dist/index.js",
-  "types": "index.d.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "prebuild": "vite build",
+    "build": "vite build && tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "generate:tokens": "node ./src/app/generate-tokens.ts",
     "cem": "cem analyze --config ./cem.config.mjs --outdir ./.vscode "
@@ -26,5 +27,14 @@
   },
   "dependencies": {
     "@tonishi0922/util": "^1.0.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles/global-tokens.css": "./dist/styles/global-tokens.css",
+    "./styles/alias-tokens.css": "./dist/styles/alias-tokens.css",
+    "./styles.css": "./dist/styles.css"
   }
 }

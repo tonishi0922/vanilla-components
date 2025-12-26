@@ -2,14 +2,19 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
+    cssCodeSplit: true,
     lib: {
-      entry: "src/index.ts",
-      name: "VanillaUI",
+      entry: {
+        index: "src/index.ts",
+        style: "src/style.css",
+      },
       formats: ["es"],
-      fileName: "index",
+      fileName: (_, name) => `${name}.js`,
     },
     rollupOptions: {
-      external: [],
+      output: {
+        assetFileNames: "[name][extname]",
+      },
     },
   },
 });
