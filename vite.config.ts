@@ -6,7 +6,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: "src/index.ts",
-        style: "src/styles.css",
+        styles: "src/styles.css",
       },
       formats: ["es"],
       fileName: (_, name) => `${name}.js`,
