@@ -13,37 +13,29 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     # npm version が作る commit で再実行されるのを防ぐ
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-
       - name: Configure git
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
       - name: Install dependencies
         run: npm ci
-
       - name: Bump patch version
         run: |
           npm version patch -m "chore(release): %s"
-
       - name: Build
         run: npm run build
-
       - name: Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PAT_TOKEN }}
