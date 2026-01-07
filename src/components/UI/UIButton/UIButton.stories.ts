@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
-import { define } from "../lib/define";
-import { UIButton } from "../components/UI/UIButton";
-import type { ButtonProps } from "../components/UI/UIButton";
+import { define } from "../../../lib/define";
+import { UIButton } from ".";
+import type { ButtonProps } from ".";
 
 const meta: Meta<ButtonProps> = {
   title: "UI/UIButton",
