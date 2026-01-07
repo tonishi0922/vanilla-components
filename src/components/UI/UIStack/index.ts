@@ -37,11 +37,20 @@ type Attrs =
   | "orientation"
   | "gap"
   | "align"
-  | "wrap"
   | "justify"
+  | "wrap"
   | "padding"
   | "margin";
 
+export type UIStackProps = {
+  orientation: "vertical" | "horizontal";
+  gap: number;
+  align: "start" | "center" | "end";
+  justify: "start" | "center" | "end" | "between" | "around" | "evenly";
+  wrap: "wrap" | "nowrap" | "wrap-reverse";
+  padding: number;
+  margin: number;
+};
 export class UIStack extends BaseElement<Attrs> {
   static override get observedAttributes() {
     return ["orientation", "gap", "align", "justify", "wrap"];

@@ -6,6 +6,16 @@ type Attrs = "size" | "variant" | "justify" | "type" | "disabled";
 type Size = "default" | "small" | "large";
 type Variant = "primary" | "secondary" | "danger";
 type ButtonType = "button" | "reset" | "submit";
+type Justify = "start" | "center" | "end";
+
+export type ButtonProps = {
+  size?: Size;
+  variant?: Variant;
+  justify?: Justify;
+  type?: ButtonType;
+  disabled?: boolean;
+  label?: string;
+};
 
 /**
  * @element ui-button

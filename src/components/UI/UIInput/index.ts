@@ -47,6 +47,17 @@ type Attrs =
   | "required"
   | "disabled";
 
+export type UIInputProps = {
+  labelText: string;
+  labelFor: string;
+  value: string;
+  id: string;
+  name: string;
+  type: "text" | "number" | "email" | "password" | "textarea";
+  required: boolean;
+  disabled: boolean;
+};
+
 export class UIInput extends BaseInternalElement<
   HTMLInputElement | HTMLTextAreaElement,
   Attrs
