@@ -21,5 +21,4 @@ export * from "./components/UI/UIImage";
 export * from "./components/UI/UICard";
 
 // lib
-import { define } from "./lib/define";
-export { define };
+export { define } from "./lib/define";
