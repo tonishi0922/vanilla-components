@@ -44,7 +44,7 @@ const makeBlock = (indent: number) => {
 const block = makeBlock(2);
 
 const output = `
-export type ${componetName}Props {
+export type ${componetName}Props = {
 ${block}
 }
 `;
