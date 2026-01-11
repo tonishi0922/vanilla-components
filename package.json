@@ -13,7 +13,8 @@
     "prebuild": "vite build",
     "build": "vite build && tsc -p tsconfig.build.json",
     "preview": "vite preview",
-    "generate:tokens": "node ./src/app/generate-tokens.ts",
+    "generate:tokens": "node ./src/lib/generate-tokens.ts",
+    "generate:component-type": "node ./src/lib/generate-types.ts",
     "cem": "cem analyze --config ./cem.config.mjs --outdir ./.vscode ",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
