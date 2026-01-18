@@ -25,12 +25,20 @@ const jsdocRegex = /@attr(.*)\n/g;
 const attrKeyRegex = /{.*} (.*)/;
 const attrValueRegex = /{(.*)}/;
 
+const toCamelCase = (str: string) =>
+  str
+    .split("-")
+    .map((word, i) =>
+      i === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)
+    )
+    .join("");
+
 let groups: Record<string, string> = {};
 
 let match;
 while ((match = jsdocRegex.exec(js)) !== null) {
   const [, name] = match;
-  const key = name.match(attrKeyRegex)![1];
+  const key = toCamelCase(name.match(attrKeyRegex)![1]);
   const value = name.match(attrValueRegex)![1];
   groups[key] = value;
 }
