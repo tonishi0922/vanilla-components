@@ -44,3 +44,8 @@ export class UIContainer extends BaseElement<Attrs> {
     this.style.setProperty("--_gap", `var(--space-${gap})`);
   }
 }
+
+export type UIContainerProps = {
+  fullHeight: boolean;
+  gap: number;
+}
