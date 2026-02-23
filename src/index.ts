@@ -22,3 +22,4 @@ export * from "./components/UI/UICard";
 
 // lib
 export { define } from "./lib/define";
+export * from "./components/CreateElement";
