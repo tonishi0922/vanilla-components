@@ -13,14 +13,24 @@ export type CreateElementProps<
 };
 
 export class CreateElement extends HTMLElement {
+  private props?: CreateElementProps;
+
   static get observedAttributes(): string[] {
     return [];
   }
 
-  constructor(props: CreateElementProps) {
-    const { template, css, options } = props;
+  constructor() {
     super();
+  }
 
+  init(_props: CreateElementProps) {
+    this.props = _props;
+    this.render();
+  }
+
+  render() {
+    if (!this.props) return;
+    const { template, css, options } = this.props;
     if (options?.isShadowRoot)
       this.attachShadow({
         mode: options?.attachShadowMode ?? "open",
