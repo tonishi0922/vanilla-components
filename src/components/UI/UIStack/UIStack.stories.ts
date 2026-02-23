@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { define } from "../../../lib/define";
 import { UIStack } from ".";
 import type { UIStackProps } from ".";
-import { background, color } from "storybook/theming";
 
 const meta: Meta<UIStackProps> = {
   title: "Stack/UIStack",

@@ -6,7 +6,7 @@ import { BaseElement } from "../../internal/BaseElement";
  *
  * @description
  * 画像とキャプションを表示するコンポーネント。
- * isBackground を指定すると背景画像として表示する。
+ * is-background を指定すると背景画像として表示する。
  *
  * @attr {string} src
  * 画像のソース
@@ -17,16 +17,16 @@ import { BaseElement } from "../../internal/BaseElement";
  * @attr {string} caption
  * 画像のキャプション
  *
- * @attr {boolean} isBackground
+ * @attr {boolean} is-background
  * 背景画像化を行うか（指定すると true）
  *
  */
 
-type Attrs = "src" | "alt" | "caption" | "isBackground";
+type Attrs = "src" | "alt" | "caption" | "is-background";
 
 export class UIImage extends BaseElement<Attrs> {
   static override get observedAttributes() {
-    return ["src", "alt", "caption", "isBackground"];
+    return ["src", "alt", "caption", "is-background"];
   }
 
   constructor() {
@@ -45,7 +45,7 @@ export class UIImage extends BaseElement<Attrs> {
     const src = this.attr("src") ?? "";
     const alt = this.attr("alt") ?? "";
     const caption = this.attr("caption") ?? "";
-    const isBackground = this.hasAttribute("isBackground");
+    const isBackground = this.hasAttribute("is-background");
 
     const uiFigure = this.root.querySelector<HTMLElement>(".ui-figure")!;
     const img = uiFigure.querySelector<HTMLImageElement>(".ui-img")!;
@@ -69,3 +69,10 @@ export class UIImage extends BaseElement<Attrs> {
     }
   }
 }
+
+export type UIImageProps = {
+  src: string;
+  alt: string;
+  caption: string;
+  isBackground: boolean;
+};
