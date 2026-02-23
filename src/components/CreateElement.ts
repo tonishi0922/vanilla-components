@@ -12,7 +12,7 @@ export type CreateElementProps<
   options?: TCreateElementOptions;
 };
 
-export default class CreateElement extends HTMLElement {
+export class CreateElement extends HTMLElement {
   static get observedAttributes(): string[] {
     return [];
   }
